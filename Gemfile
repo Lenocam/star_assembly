@@ -43,7 +43,6 @@ gem 'cancancan', '~> 1.7'
 gem 'rabl'
 gem 'oj'
 
-
 group :production do
   gem 'rails_12factor'
   gem 'pg'
