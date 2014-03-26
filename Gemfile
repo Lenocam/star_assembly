@@ -69,7 +69,6 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "quiet_assets"
-  gem "rails_layout"
 end
 
 # Use ActiveModel has_secure_password
