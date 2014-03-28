@@ -2,21 +2,20 @@
 <html>
 <head>
   <title>Starbound</title>
-  <%= stylesheet_link_tag    "forem", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "forem", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "forem", "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "forem", "application", "data-turbolinks-track" => true %>
 
-  <%= forem_atom_auto_discovery_link_tag %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <nav class='offset1'>
     <% if current_user %>
       Signed in as <%= current_user %> &middot; 
-      <%= link_to "Sign out", main_app.destroy_user_session_path, :method => :delete %>
+    |  <%= link_to "Sign out", main_app.destroy_user_session_path, :method => :delete %>
     <% else %>
       <%= link_to "Sign in", main_app.new_user_session_path %> &middot;
-      <%= link_to "Register", main_app.new_user_registration_path %>
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    |  <%= link_to "Register", main_app.new_user_registration_path %>
+    |  <%= link_to "Sign out", main_app.destroy_user_session_path, :method => :delete %>
     <% end %>
   </nav>
 <div class="offset1 span10">
